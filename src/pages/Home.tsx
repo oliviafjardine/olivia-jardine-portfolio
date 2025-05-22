@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <About />
+      <section id="about">
+        <About />
+      </section>
     </>
   );
 };
