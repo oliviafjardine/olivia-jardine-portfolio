@@ -8,7 +8,13 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="flex flex-col min-h-screen bg-[url('/landscape.jpg')] bg-cover bg-center bg-no-repeat">
+    <div className="relative flex flex-col min-h-screen overflow-x-hidden">
+      {/* Fixed background image for smooth scrolling */}
+      <div
+        aria-hidden="true"
+        className="fixed inset-0 -z-10 w-full h-full bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/landscape.jpg')" }}
+      />
       <Navbar />
       <main className="flex-grow">
         {children}
