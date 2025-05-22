@@ -32,6 +32,9 @@ export default {
       },
       fontFamily: {
         sans: [
+          'Onest',
+          'Inter',
+          'Montserrat',
           '-apple-system',
           'BlinkMacSystemFont',
           'Segoe UI',
