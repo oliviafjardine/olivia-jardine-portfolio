@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==== Base Layer: CSS Variables, Body, Borders ==== */
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 98%;
+    --primary: 221 83% 56%;
+    --primary-foreground: 0 0% 90%;
+    --secondary:233 82% 50%;
+    --secondary-foreground: 0 0% 50%;
+    --muted: #e5e7eb;
+    --button: 0 0% 10%;
+    --border: #e5e7eb;
+  }
+
+  .dark {
+    --background: #1f2937;
+    --foreground: #f9fafb;
+    --primary: #60a5fa;
+    --primary-foreground: #1e3a8a;
+    --secondary: #374151;
+    --secondary-foreground: #f3f4f6;
+    --muted: #4b5563;
+    --button: #2563eb;
+    --border: #4b5563;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans bg-background text-foreground text-base;
+    font-weight: 400;
+  }
+}
+
+/* ==== Components Layer: Reusable Classes ==== */
+@layer components {
+  .btn {
+    @apply bg-button hover:bg-button/80 text-primary-foreground py-2 px-4 rounded-full;
+  }
+}
+
+@layer utilities {
+  .underlink {
+    position: relative;
+    cursor: pointer;
+  }
+  .underlink::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: all 0.3s;
+    transform: translateX(-50%);
+  }
+  .underlink:hover::after {
+    left: 50%;
+    width: 60%;
+    height: 1px;
+    transform: translateX(-50%);
+  }
+}
