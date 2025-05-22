@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 const Hero = () => {
   return (
     <section className="w-full min-h-[calc(100vh-4rem)] flex justify-center relative">
-      <div className="relative m-auto w-[80%] max-w-8xl h-[70vh] max-h-[100vh] bg-background/15 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-foreground/60 flex flex-col justify-between">
+      <div className="relative m-auto w-[70%] max-w-7xl h-[70vh] max-h-[100vh] bg-background/15 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-foreground/60 flex flex-col justify-between">
 
         {/* Upper content */}
         <div className="flex flex-col gap-4 mt-40">
