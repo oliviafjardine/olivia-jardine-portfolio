@@ -56,7 +56,7 @@ const Navbar = () => {
     ));
 
   return (
-      <nav className="bg-background/5 backdrop-blur-sm py-3 px-6 sticky top-0 z-10 shadow-md">      <div className="container mx-auto flex justify-between items-center">
+      <nav className="bg-background/10 backdrop-blur-sm py-3 px-6 sticky top-0 z-10 shadow-md">      <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 text-lg font-semibold text-foreground">
           <span>OLIVIA JARDINE</span>
         </Link>
@@ -76,7 +76,7 @@ const Navbar = () => {
 
       {/* Mobile menu overlay */}
       {(isMobileMenuOpen || isFadingOut) && (
-        <div className={`md:hidden fixed inset-0 bg-zinc-950 z-50 flex flex-col items-center justify-center ${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'}`}>
+        <div className={`md:hidden fixed inset-0 bg-primary/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center ${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'}`}>
           {/* Close button */}
           <button
             onClick={toggleMobileMenu}

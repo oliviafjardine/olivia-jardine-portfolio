@@ -6,15 +6,16 @@ import { ChevronDown } from "lucide-react";
 const Hero = () => {
   return (
     <section className="w-full min-h-[calc(100vh-4rem)] flex justify-center relative">
-      <div className="relative m-auto w-[70%] max-w-7xl h-[70vh] max-h-[100vh] bg-background/15 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-foreground/60 flex flex-col justify-between">
+      <div className="relative m-auto w-[70%] max-w-7xl h-[70vh] max-h-[100vh] bg-background/20 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-background/30 flex flex-col justify-between">
 
         {/* Upper content */}
         <div className="flex flex-col gap-4 mt-40">
-          <h1 className="text-6xl font-bold">
+          <h1 className="text-7xl font-extrabold">
             <span className="text-foreground md:mr-2">OLIVIA</span>{' '}
             <span className="text-foreground">JARDINE</span>
           </h1>
           <p className="text-lg flex items-center gap-2">
+            Full Stack Developer
             <MapPin className="w-5 h-5" />
             Seattle, WA
           </p>
@@ -38,7 +39,7 @@ const Hero = () => {
       {/* Scroll down arrow - always bottom center of hero section, but below navbar menu */}
       <a
         href="#about"
-        className="absolute left-1/2 -translate-x-1/2 bottom-6 z-0 animate-bounce cursor-pointer"
+        className="absolute inset-x-0 mx-auto w-fit bottom-6 z-0 animate-bounce cursor-pointer flex justify-center"
         onClick={e => {
           e.preventDefault();
           const el = document.getElementById('about');

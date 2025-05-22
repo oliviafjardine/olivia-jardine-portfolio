@@ -1,11 +1,9 @@
-import React from 'react';
+import AboutSection from "@/components/sections/AboutSection";
 
-const About = () => {
+export default function AboutPage() {
   return (
-    <div className="min-h-[60vh] flex items-center justify-center">
-      <h1 className="text-3xl font-light text-gray-800">About Page</h1>
-    </div>
+    <main className="space-y-6">
+      <AboutSection />
+    </main>
   );
-};
-
-export default About;
+}

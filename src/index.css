@@ -7,9 +7,9 @@
 /* ==== Base Layer: CSS Variables, Body, Borders ==== */
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 98%;
-    --primary: 221 83% 56%;
+    --background: 0 0% 8%;
+    --foreground: 0 0% 8%;
+    --primary: 0 0% 90%;
     --primary-foreground: 0 0% 90%;
     --secondary:233 82% 50%;
     --secondary-foreground: 0 0% 50%;
@@ -44,6 +44,12 @@
 @layer components {
   .btn {
     @apply bg-button hover:bg-button/80 text-primary-foreground py-2 px-4 rounded-full;
+  }
+  .section-title {
+    @apply text-xl md:text-2xl lg:text-3xl font-bold mb-4;
+  }
+  .section-subtitle {
+    @apply text-sm md:text-md lg:text-lg font-semibold mb-4;
   }
 }
 
