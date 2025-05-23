@@ -1,7 +1,14 @@
-export default function PortfolioSection() {
+type PortfolioProps = {
+  isHome?: boolean;
+};
+
+export default function PortfolioSection({ isHome = false }: PortfolioProps) {
   return (
-    <div className="min-h-[40vh] flex items-center justify-center">
-      <h2 className="section-title">Portfolio</h2>
+    <div className={isHome ? "section-outer" : "section-outer section-outer--page"}>
+      <div className="page-box">
+        <h2 className="section-title">{isHome ? 'Portfolio Preview' : 'Portfolio'}</h2>
+        {/* Add preview or full portfolio content here based on isHome */}
+      </div>
     </div>
   );
 }

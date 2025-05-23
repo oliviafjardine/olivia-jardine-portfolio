@@ -7,27 +7,15 @@
 /* ==== Base Layer: CSS Variables, Body, Borders ==== */
 @layer base {
   :root {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 8%;
-    --primary: 0 0% 90%;
-    --primary-foreground: 0 0% 90%;
-    --secondary:233 82% 50%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 98%;
+    --primary: 0 0% 10%;
+    --primary-foreground: 0 0% 10;
+    --secondary:0 0% 50%;
     --secondary-foreground: 0 0% 50%;
     --muted: #e5e7eb;
     --button: 0 0% 10%;
     --border: #e5e7eb;
-  }
-
-  .dark {
-    --background: #1f2937;
-    --foreground: #f9fafb;
-    --primary: #60a5fa;
-    --primary-foreground: #1e3a8a;
-    --secondary: #374151;
-    --secondary-foreground: #f3f4f6;
-    --muted: #4b5563;
-    --button: #2563eb;
-    --border: #4b5563;
   }
 
   * {
@@ -42,14 +30,23 @@
 
 /* ==== Components Layer: Reusable Classes ==== */
 @layer components {
+  .section-outer {
+    @apply py-16;
+  }
+  .section-outer--page {
+    @apply py-20 pt-32;
+  }
   .btn {
     @apply bg-button hover:bg-button/80 text-primary-foreground py-2 px-4 rounded-full;
   }
   .section-title {
-    @apply text-xl md:text-2xl lg:text-3xl font-bold mb-4;
+    @apply text-xl md:text-2xl lg:text-3xl font-bold text-center mb-4;
   }
   .section-subtitle {
     @apply text-sm md:text-md lg:text-lg font-semibold mb-4;
+  }
+  .page-box {
+    @apply relative m-auto w-[70%] max-w-7xl min-h-[60vh] max-h-[100vh] bg-background/20 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-background/30 flex flex-col;
   }
 }
 

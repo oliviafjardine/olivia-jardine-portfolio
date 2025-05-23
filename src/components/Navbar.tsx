@@ -56,7 +56,7 @@ const Navbar = () => {
     ));
 
   return (
-      <nav className="bg-background/10 backdrop-blur-sm py-3 px-6 sticky top-0 z-10 shadow-md">      <div className="container mx-auto flex justify-between items-center">
+      <nav className="bg-background/5 backdrop-blur-sm py-3 px-6 fixed top-0 left-0 w-full z-20 shadow-md">      <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 text-lg font-semibold text-foreground">
           <span>OLIVIA JARDINE</span>
         </Link>

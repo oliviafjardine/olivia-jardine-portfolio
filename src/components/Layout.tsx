@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
       <div
         aria-hidden="true"
         className="fixed inset-0 -z-10 w-full h-full bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/white3.jpg')" }}
+        style={{ backgroundImage: "url('/house.png')" }}
       />
       <Navbar />
       <main className="flex-grow">

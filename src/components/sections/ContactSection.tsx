@@ -1,7 +1,9 @@
-export default function ContactSection() {
+export default function ContactSection({ isHome = false }: { isHome?: boolean }) {
   return (
-    <div className="min-h-[40vh] flex items-center justify-center">
-      <h2 className="section-title">Contact</h2>
+    <div className={isHome ? "section-outer" : "section-outer section-outer--page"}>
+      <div className="page-box">
+        <h2 className="section-title">Contact</h2>
+      </div>
     </div>
   );
 }

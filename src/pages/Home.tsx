@@ -13,13 +13,13 @@ const Home = () => {
         <About isHome />
       </section>
       <section id="skills">
-        <Skills />
+        <Skills isHome />
       </section>
       <section id="portfolio">
-        <Portfolio />
+        <Portfolio isHome />
       </section>
       <section id="contact">
-        <Contact />
+        <Contact isHome />
       </section>
     </>
   );
