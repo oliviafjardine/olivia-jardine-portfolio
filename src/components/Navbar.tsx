@@ -45,18 +45,22 @@ const Navbar = () => {
         onClick={isMobile ? toggleMobileMenu : undefined}
         className={`${
           isCTA
-            ? 'btn'
-            : 'underlink px-4 py-2 rounded-full transition-colors'
+            ? 'btn text-sm'
+            : 'underlink px-4 py-2 rounded-full transition-colors text-sm md:text-base'
         } ${
-          isMobile ? 'text-xl px-6 py-2' : 'px-4 py-2'
+          isMobile ? 'text-lg px-6 py-2' : 'px-4 py-2'
         } rounded-full transition-colors`}
       >
-        {label}
+        {isCTA ? (
+          <span className="btn__content">{label}</span>
+        ) : (
+          label
+        )}
       </Link>
     ));
 
   return (
-      <nav className="bg-background/5 backdrop-blur-sm py-3 px-6 fixed top-0 left-0 w-full z-20 shadow-md">      <div className="container mx-auto flex justify-between items-center">
+      <nav className="bg-primary/5 backdrop-blur-md py-3 px-6 fixed top-0 left-0 w-full z-20 shadow-md">      <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 text-lg font-semibold text-foreground">
           <span>OLIVIA JARDINE</span>
         </Link>
@@ -76,7 +80,7 @@ const Navbar = () => {
 
       {/* Mobile menu overlay */}
       {(isMobileMenuOpen || isFadingOut) && (
-        <div className={`md:hidden fixed inset-0 bg-primary/80 backdrop-blur-lg z-50 flex flex-col items-center justify-center ${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'}`}>
+        <div className={`md:hidden fixed inset-0 bg-primary/10 backdrop-blur-2xl z-50 flex flex-col items-center justify-center ${isFadingOut ? 'animate-fade-out' : 'animate-fade-in'}`}>
           {/* Close button */}
           <button
             onClick={toggleMobileMenu}

@@ -1,25 +1,88 @@
 import React from 'react';
 import { MapPin, Github, Linkedin, Instagram } from 'lucide-react';
 import { ChevronDown } from "lucide-react";
+import { motion } from 'framer-motion';
 
 
 const Hero = () => {
   return (
     <section className="w-full min-h-screen flex items-center justify-center relative">
-      <div className="page-box h-[70vh] flex flex-col justify-between">
+      <div className="page-box h-[70vh] flex flex-col justify-between mt-32">
 
         {/* Upper content */}
         <div className="flex flex-col gap-4 mt-40">
-          <h1 className="text-7xl font-extrabold">
-            <span className="text-foreground md:mr-2">OLIVIA</span>{' '}
-            <span className="text-foreground">JARDINE</span>
+          <h1 className="text-7xl font-bold tracking-tight">
+            <motion.span
+              className="text-foreground md:mr-2 inline-block"
+              initial="hidden"
+              animate="visible"
+              variants={{}}
+            >
+              {"OLIVIA".split("").map((char, i) => (
+                <motion.span
+                  key={"olivia-" + i}
+                  className="inline-block"
+                  variants={{
+                    hidden: { opacity: 0, y: 10 },
+                    visible: (i) => ({
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: 0.5 + i * 0.035, // 0.5s initial delay, faster stagger
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 30,
+                      },
+                    }),
+                  }}
+                  custom={i}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {char === ' ' ? '\u00A0' : char}
+                </motion.span>
+              ))}
+            </motion.span>{' '}
+            <motion.span
+              className="text-foreground inline-block"
+              initial="hidden"
+              animate="visible"
+              variants={{}}
+            >
+              {"JARDINE".split("").map((char, i) => (
+                <motion.span
+                  key={"jardine-" + i}
+                  className="inline-block"
+                  variants={{
+                    hidden: { opacity: 0, y: 10 },
+                    visible: (i) => ({
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        delay: 0.5 + (i + 7) * 0.035, // 0.5s initial delay, faster stagger
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 30,
+                      },
+                    }),
+                  }}
+                  custom={i}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  {char === ' ' ? '\u00A0' : char}
+                </motion.span>
+              ))}
+            </motion.span>
           </h1>
           <p className="text-lg flex items-center gap-2">
             Full Stack Developer
             <MapPin className="w-5 h-5" />
             Seattle, WA
           </p>
-          <a href="#portfolio" className="btn w-fit">View My Work</a>
+          <a href="#portfolio" className="btn w-fit">
+            <span className="btn__content">View My Work</span>
+          </a>
         </div>
 
         {/* Social icons in bottom right */}
